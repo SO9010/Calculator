@@ -12,6 +12,7 @@ import android.os.Vibrator;
 
 public class MainActivity extends AppCompatActivity {
 
+    int canDel = 1;
     int reset = 1;
     int longvib = 10;
     private Vibrator myVib;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void sevenPressed(View view){
         TextView textView = findViewById(R.id.textView);
-        if(reset == 0 ){
+        if(reset == 0){
             textView.setText("7");
             reset = 1;
         }
@@ -155,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void minusPressed(View view){
         TextView textView = findViewById(R.id.textView);
+        reset = 1;
         if(reset == 0 ){
             textView.setText("-");
             reset = 1;
@@ -166,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void plusPressed(View view){
         TextView textView = findViewById(R.id.textView);
+        reset = 1;
         if(reset == 0 ){
             textView.setText("+");
             reset = 1;
@@ -177,6 +180,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void timesPressed(View view){
         TextView textView = findViewById(R.id.textView);
+        reset = 1;
         if(reset == 0 ){
             textView.setText("x");
             reset = 1;
@@ -188,6 +192,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void divPressed(View view){
         TextView textView = findViewById(R.id.textView);
+        reset = 1;
         if(reset == 0 ){
             textView.setText("÷");
             reset = 1;
@@ -200,14 +205,12 @@ public class MainActivity extends AppCompatActivity {
     public void delPressed(View view){
         myVib.vibrate(longvib);
         TextView textView = findViewById(R.id.textView);
+        reset = 1;
         String str = textView.getText().toString();
         int strlen = str.length();
         if(strlen > 0 &&  reset != 0){
             str = str.substring ( 0, str.length() - 1 );
             textView.setText (str);
-        }
-        else{
-            textView.setText("");
         }
     }
     public void equalsPressed(View view){
@@ -230,6 +233,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, hidden_notes.class);
             startActivity(intent);
         }
+        canDel = 0;
         reset = 0;
     }
 
