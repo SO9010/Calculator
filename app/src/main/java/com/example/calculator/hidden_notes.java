@@ -22,7 +22,6 @@ public class hidden_notes extends AppCompatActivity {
         myVib.vibrate(longvib);
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-        super.onDestroy();
 
     }
 }
