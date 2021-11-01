@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             reset = 1;
         }
         else{
-            textView.append("7");
+            textView.append("1");
         }
         myVib.vibrate(longvib);
     }
