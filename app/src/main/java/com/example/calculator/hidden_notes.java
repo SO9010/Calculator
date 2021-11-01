@@ -2,6 +2,7 @@ package com.example.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -18,8 +19,11 @@ public class hidden_notes extends AppCompatActivity {
         setContentView(R.layout.activity_hidden_notes);
     }
     public void Destroy(View view){
-        super.onDestroy();
         myVib.vibrate(longvib);
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        super.onDestroy();
+
     }
 }
 
