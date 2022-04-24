@@ -9,7 +9,7 @@
         <entry key="app/src/main/res/drawable/custom_button.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/drawable/equals.xml" value="0.25052083333333336" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2708333333333333" />
-        <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.2" />
+        <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_hidden_notes.xml" value="0.34322916666666664" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2798913043478261" />
         <entry key="app/src/main/res/layout/activity_note_editor_button.xml" value="0.234375" />

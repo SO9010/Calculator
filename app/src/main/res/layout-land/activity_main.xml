@@ -7,37 +7,20 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="294dp"
-        android:layout_height="368dp"
-        android:layout_marginEnd="11dp"
-        android:gravity="end"
-        android:hint="0"
-        android:maxHeight="250dp"
-        android:maxLength="30"
-        android:maxLines="4"
-        android:textSize="70sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tableLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <View
-        android:layout_width="1dp"
-        android:layout_height="match_parent"
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
         android:background="#C1393939"
-        app:layout_constraintEnd_toStartOf="@+id/tableLayout"
-        app:layout_constraintStart_toEndOf="@+id/textView" />
+        tools:layout_editor_absoluteX="-28dp"
+        tools:layout_editor_absoluteY="86dp" />
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="515dp"
-        android:layout_height="385dp"
-        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/view">
 
         <TableRow
             android:layout_width="match_parent"
@@ -110,6 +93,17 @@
                 android:text="9"
                 android:textSize="25dp" />
 
+            <Space
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp" />
+
+            <Space
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp" />
 
         </TableRow>
 
@@ -175,6 +169,34 @@
                 android:text="6"
                 android:textSize="25dp" />
 
+            <Button
+                android:id="@+id/CLEAR"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/custom_button"
+                android:onClick="clrPressed"
+                android:text="C"
+                android:textColor="@color/orangy"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/DEL"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/custom_button"
+                android:onClick="delPressed"
+                android:text="⌫"
+                android:textColor="@color/orangy"
+                android:textSize="25dp" />
+
 
         </TableRow>
 
@@ -182,11 +204,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Space
-                android:layout_width="85dp"
-                android:layout_height="85dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="5dp" />
 
             <Button
                 android:id="@+id/plus"
@@ -200,6 +217,18 @@
                 android:onClick="plusPressed"
                 android:text="+"
                 android:textColor="@color/orangy"
+                android:textSize="25dp" />
+
+            <Button
+                android:id="@+id/Zero"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/custom_button"
+                android:onClick="zeroPressed"
+                android:text="0"
                 android:textSize="25dp" />
 
 
@@ -241,41 +270,6 @@
                 android:text="3"
                 android:textSize="25dp" />
 
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/DEL"
-                android:layout_width="85dp"
-                android:layout_height="85dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/custom_button"
-                android:onClick="delPressed"
-                android:text="⌫"
-                android:textColor="@color/orangy"
-                android:textSize="25dp" />
-
-            <Button
-                android:id="@+id/CLEAR"
-                android:layout_width="85dp"
-                android:layout_height="85dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/custom_button"
-                android:onClick="clrPressed"
-                android:text="C"
-                android:textColor="@color/orangy"
-                android:textSize="25dp" />
-
             <Button
                 android:id="@+id/point"
                 android:layout_width="85dp"
@@ -291,18 +285,6 @@
                 android:textSize="25dp" />
 
             <Button
-                android:id="@+id/Zero"
-                android:layout_width="85dp"
-                android:layout_height="85dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/custom_button"
-                android:onClick="zeroPressed"
-                android:text="0"
-                android:textSize="25dp" />
-
-            <Button
                 android:id="@+id/equals"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
@@ -315,11 +297,22 @@
                 android:text="="
                 android:textColor="@color/orangy"
                 android:textSize="25dp" />
-
-
         </TableRow>
-
     </TableLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="end"
+        android:hint="0"
+        android:maxHeight="250dp"
+        android:maxLength="30"
+        android:maxLines="4"
+        android:textSize="70sp"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        tools:layout_editor_absoluteX="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
